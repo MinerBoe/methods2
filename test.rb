@@ -59,4 +59,20 @@ describe 'Methods2' do
       successful_squirrel_party?(30, false).must_equal(false)
     end
   end
+
+  describe 'ticket' do
+    it 'all zero' do
+      ticket(0, 0, 0).must_equal(0)
+    end
+    it 'one pair equals 10' do
+      ticket(5, 5, 9).must_equal(10)
+    end
+    it 'all pairs equal 10' do
+      ticket(5, 5, 5).must_equal(10)
+    end
+    it 'ab equals bc + 10' do
+      ticket(3, 12, 2).must_equal(5)
+    end
+
+  end
 end
