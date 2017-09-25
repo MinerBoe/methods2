@@ -1,9 +1,9 @@
 ########################################
 #
 # Methods2
-#	
-#	Instructions and definitions here: 
-#	
+#
+#	Instructions and definitions here:
+#
 #	github.com/mvhs-apcs/methods2
 #
 #	Write the tests first!
@@ -16,7 +16,16 @@
 
 
 # TODO - write elevenish?
-	
+def elevenish?(int)
+	if int % 11 == 0
+		return true
+	end
+	if (int-1)% 11 == 0
+		return true
+	end
+	return false
+end
+
 # TODO - write ice_cream_party?
 
 # TODO - write successful_squirrel_party?
