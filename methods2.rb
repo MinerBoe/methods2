@@ -24,7 +24,6 @@ def elevenish?(int)
 	return false
 end
 
-# TODO - write ice_cream_party?
 def ice_cream_party?(ice_cream, candy)
 	if ice_cream < 5 || candy < 5
 		return 0
@@ -37,7 +36,15 @@ def ice_cream_party?(ice_cream, candy)
 	end
 end
 
-# TODO - write successful_squirrel_party?
+def successful_squirrel_party?(nuts, is_weekend)
+	if is_weekend && nuts >=40
+		return true
+	end
+	if nuts >= 40 && nuts <= 60
+		return true
+	end
+	return false
+end
 
 # TODO - write ticket
 
