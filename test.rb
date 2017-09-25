@@ -38,4 +38,25 @@ describe 'Methods2' do
       ice_cream_party?(5, 5).must_equal(1)
     end
   end
+
+  describe 'successful_squirrel_party?' do
+    it 'is weekend between 40 and 60' do
+      successful_squirrel_party?(50, true).must_equal(true)
+    end
+    it 'is weekend over 60' do
+      successful_squirrel_party?(70, true).must_equal(true)
+    end
+    it 'is weekend under 40' do
+      successful_squirrel_party?(30, true).must_equal(false)
+    end
+    it 'is weekday over 60' do
+      successful_squirrel_party?(70, false).must_equal(false)
+    end
+    it 'is weekday between 40 and 60' do
+      successful_squirrel_party?(50, false).must_equal(true)
+    end
+    it 'is weekday under 40' do
+      successful_squirrel_party?(30, false).must_equal(false)
+    end
+  end
 end
