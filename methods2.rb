@@ -47,6 +47,17 @@ def successful_squirrel_party?(nuts, is_weekend)
 end
 
 # TODO - write ticket
+def ticket(a, b, c)
+	if a+b == 10 || a+c == 10 || b+c == 10
+		return 10
+	end
+	if a+b == 10+a+c || a+b == 10+b+c
+		return 5
+	end
+
+	return 0
+end
+
 
 # TODO - write in_order?
 
