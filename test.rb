@@ -73,6 +73,20 @@ describe 'Methods2' do
     it 'ab equals bc + 10' do
       ticket(3, 12, 2).must_equal(5)
     end
+  end
 
+  describe 'in_order?' do
+    it 'in order and no bOK' do
+      in_order?(3, 4, 5, false).must_equal(true)
+    end
+    it 'in order and bOK' do
+      in_order?(4, 5, 6, true).must_equal(true)
+    end
+    it 'out of order and bOK' do
+      in_order?(6, 5, 4, true).must_equal(false)
+    end
+    it 'b is the smallest and bOK' do
+      in_order?(6, 4, 8, true).must_equal(true)
+    end
   end
 end
