@@ -107,4 +107,19 @@ describe 'Methods2' do
       less_by_ten?(45, 20, 30).must_equal(true)
     end
   end
+
+  describe 'fizz_string' do
+    it 'no f or b' do
+      fizz_string("Hello").must_equal("Hello")
+    end
+    it 'starts with f' do
+      fizz_string("Funny").must_equal("Fizz")
+    end
+    it 'ends with b' do
+      fizz_string("climb").must_equal("Buzz")
+    end
+    it 'starts with f and ends with b' do
+      fizz_string("flub").must_equal("FizzBuzz")
+    end
+  end
 end
