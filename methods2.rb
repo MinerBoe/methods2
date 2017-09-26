@@ -78,6 +78,20 @@ def less_by_ten?(a, b, c)
 end
 
 # TODO - write fizz_string
+def fizz_string(str)
+	unchanged = str
+	str = str.downcase()
+	if str[0] == 'f'
+		if str[str.length - 1] == 'b'
+			return 'FizzBuzz'
+		end
+		return 'Fizz'
+	end
+	if str[str.length - 1] == 'b'
+		return 'Buzz'
+	end
+	return unchanged
+end
 
 # TODO - write first_last_six?
 
