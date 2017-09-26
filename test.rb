@@ -122,4 +122,19 @@ describe 'Methods2' do
       fizz_string("flub").must_equal("FizzBuzz")
     end
   end
+
+  describe 'first_last_six?' do
+    it 'six first' do
+      first_last_six?([6, 8, 9]).must_equal(true)
+    end
+    it 'six last' do
+      first_last_six?([12, 8, 6]).must_equal(true)
+    end
+    it 'six first and last' do
+      first_last_six?([6, 5, 6]).must_equal(true)
+    end
+    it 'no six' do
+      first_last_six?([5, 5, 7]).must_equal(false)
+    end
+  end
 end
