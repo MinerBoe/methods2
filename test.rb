@@ -89,4 +89,22 @@ describe 'Methods2' do
       in_order?(6, 4, 8, true).must_equal(true)
     end
   end
+
+  describe 'less_by_ten?' do
+    it 'all equal' do
+      less_by_ten?(10, 10, 10).must_equal(false)
+    end
+    it 'one less by ten - a ' do
+      less_by_ten?(10, 20, 25).must_equal(true)
+    end
+    it 'one less by ten - b ' do
+      less_by_ten?(20, 10, 25).must_equal(true)
+    end
+    it 'one less by ten - c' do
+      less_by_ten?(25, 20, 10).must_equal(true)
+    end
+    it 'both less by more than ten' do
+      less_by_ten?(45, 20, 30).must_equal(true)
+    end
+  end
 end
