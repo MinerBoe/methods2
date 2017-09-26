@@ -57,8 +57,6 @@ def ticket(a, b, c)
 	return 0
 end
 
-
-# TODO - write in_order?
 def in_order?(a, b, c, bOK)
 	if bOK
 		if c > a
@@ -71,6 +69,13 @@ def in_order?(a, b, c, bOK)
 	return false
 end
 # TODO - write less_by_ten?
+
+def less_by_ten?(a, b, c)
+	if a > b + 10 || a > c + 10 || b > c + 10 || b > a + 10 || c > b + 10 || c > a + 10
+		return true
+	end
+	return false
+end
 
 # TODO - write fizz_string
 
