@@ -137,4 +137,13 @@ describe 'Methods2' do
       first_last_six?([5, 5, 7]).must_equal(false)
     end
   end
+
+  describe 'rotate_left' do
+    it 'rotate 1, 2, 3' do
+      rotate_left([1, 2, 3]).must_equal([2, 3, 1])
+    end
+    it 'rotate 4, 5, 6' do
+      rotate_left([4, 5, 6]).must_equal([5, 6, 4])
+    end
+  end
 end
