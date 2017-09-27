@@ -146,4 +146,22 @@ describe 'Methods2' do
       rotate_left([4, 5, 6]).must_equal([5, 6, 4])
     end
   end
+
+  describe 'double23?' do
+    it 'double 2' do
+      double23?([2, 2, 3]).must_equal(true)
+    end
+    it 'double 3' do
+      double23?([5, 3, 3]).must_equal(true)
+    end
+    it 'no twos or threes' do
+      double23?([4, 5, 6]).must_equal(false)
+    end
+    it 'empty array' do
+      double23?([]).must_equal(false)
+    end
+    it 'one two and one three' do
+      double23?([2, 4, 3]).must_equal(false)
+    end
+  end
 end
