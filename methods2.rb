@@ -113,4 +113,19 @@ def rotate_left(trio)
 	return trio
 end
 
-# TODO - write double23?
+def double23?(list)
+	twos = 0
+	threes = 0
+	list.each do |number|
+		if number == 2
+			twos += 1
+		end
+		if number == 3
+			threes += 1
+		end
+	end
+	if twos == 2 || threes == 2
+		return true
+	end
+	return false
+end
