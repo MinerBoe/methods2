@@ -91,7 +91,6 @@ def fizz_string(str)
 	return unchanged
 end
 
-# TODO - write first_last_six?
 def first_last_six?(list)
 	if list[0] == 6
 		return true
@@ -102,6 +101,16 @@ def first_last_six?(list)
 	return false
 end
 
-# TODO - write rotate_left
+def rotate_left(trio)
+	temp = trio[0]
+	length = trio.length
+	trio.each_with_index do |number, i|
+		if i != length - 1
+			trio[i] = trio[i+1]
+		end
+	end
+	trio[length-1] = temp
+	return trio
+end
 
 # TODO - write double23?
